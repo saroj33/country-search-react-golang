@@ -27,3 +27,4 @@ Docker file is kinda complete but a new api endpoint needs to be created in the 
 
 ## What's left
 - When clicked on the list of countries there should be a page where all the information available about a single country is shown.
+- Currently the search mechanism is quite complex. May be it can be simplified.
