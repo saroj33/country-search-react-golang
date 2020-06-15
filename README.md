@@ -1,6 +1,6 @@
 # Country search
 
-## Settinup Locally
+## Setting up Locally
 
 ### Using docker. Docker must be installed.
 The initial plan was to use the multistage docker build to build the react frontend and golang backend. Then copy the frontend's static build and serve it under golang backend.
