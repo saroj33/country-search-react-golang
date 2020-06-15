@@ -1,0 +1,41 @@
+.component-country-result-row {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  height: 32px;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  cursor: pointer;
+}
+
+.component-country-result-row:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.component-country-result-row img {
+  width: 32px;
+  height: 32px;
+  padding-right: 10px;
+}
+
+.component-country-result-row .title {
+  position: relative;
+}
+.component-country-result-row .matches {
+  margin-left: 10px;
+  float:right;
+  color: white;
+  background-color: skyblue;
+}
+.component-country-result-row .info {
+  float: right;
+  position: relative;
+  top: 8px;
+  right: 10px;
+  color: #ccc;
+  display: none;
+}
+
+.component-country-result-row:hover .info {
+  display: inline-block;
+}

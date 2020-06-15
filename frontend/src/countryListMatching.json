@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Afghanistan",
+      "code": "af",
+      "match": [
+        {
+          "key": "dollar",
+          "val" : "eat"
+        },
+        {
+          "key": "pando",
+          "val": "clothers"
+        }
+      ]
+    },
+    {
+        "name": "pakistan",
+        "code":"pk",
+        "match": [
+            {
+              "key": "laaat",
+              "val" : "suruwal"
+            },
+            {
+              "key": "meat",
+              "val": "asbestos"
+            }
+          ]
+      }
+]

@@ -1,0 +1,33 @@
+# pull official base image
+FROM node:13.12.0-alpine AS REACTBUILDER
+
+# set working directory
+WORKDIR /react-app
+COPY ./frontend .
+RUN ls -la
+RUN yarn install
+RUN yarn build
+RUN ls -la
+
+RUN ls -la build
+
+
+FROM golang:latest
+
+WORKDIR /app
+ENV GO111MODULE=on
+
+# Copy go mod and sum files
+COPY ./backend/go.mod ./backend/go.sum ./
+
+# Download all dependancies. Dependencies will be cached if the go.mod and go.sum files are not changed
+RUN go mod download
+COPY ./backend ./
+RUN ls -la
+COPY --from=REACTBUILDER /react-app/build /app/web/.  
+RUN ls -la /app/web
+# Build the Go app
+RUN go build -o backend .
+EXPOSE 2020
+# Run the executable
+CMD ["./backend"]
